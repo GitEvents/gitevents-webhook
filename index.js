@@ -20,7 +20,7 @@ module.exports = function(config) {
       function(resolve, reject) {
         debug('action: ' + payload.action);
 
-        if (!config.meetup) {
+        if (!config.github) {
           debug('GitEvents webhook plugin is not activated. Please provide GitHub credentials.');
           reject(new Error('no api key'));
         }
